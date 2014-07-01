@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1= title
+    form#formDeleteRestaurant(name="deleterestaurant",method="post",action="/removerestaurant")
+        input#inputRestName(type="text", placeholder="Restaurant Name", name="restname")
+        button#btnSubmit(type="submit") submit

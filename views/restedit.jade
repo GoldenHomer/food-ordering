@@ -1,0 +1,129 @@
+doctype html
+html.no-js.lt-ie9.lt-ie8.lt-ie7
+html.no-js.lt-ie9.lt-ie8
+    html.no-js.lt-ie9
+        html.no-js
+            head
+                meta(charset='utf-8')
+                meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+                title
+                meta(name='description', content='')
+                meta(name='viewport', content='width=device-width, initial-scale=1')
+                link(rel='stylesheet', href='css/bootstrap.min.css')
+                link(rel='stylesheet', href='css/bootstrap-theme.min.css')
+                link(rel='stylesheet', href='css/main.css')
+                script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+                script(src='js/vendor/jquery-1.11.0.min.js')
+                script(src='js/vendor/bootstrap.min.js')
+            body
+                header.navbar.navbar-fixed-top.navbar-inverse
+    .navbar-inner
+        .container
+            nav
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Add Restaurant
+                            strong.class(caret='caret')
+                        .dropdown-menu(style='padding: 15px; padding-bottom: 0px;')
+                            form#formAddUser(action='/addrest', method='post', accept-charset='UTF-8')
+                                | Restaurant Name
+                                input#inputRestName(style='margin-bottom: 15px;', type='text', name='restname', size='30')
+                                | Phone Number
+                                input#inputRestNumber(style='margin-bottom: 15px;', type='text', name='restnumber', size='30')
+                                | Menu Item
+                                input#inputMenuItem(style='margin-bottom: 15px;', type='text', name='menuitem', size='30')
+                                input#userAdmin(style='float: left; margin-right: 10px;', type='checkbox', name='useradmin', value='1')
+                                label.string.optional(for='userAdmin')  Admin?
+                                input.btn.btn-primary(style='clear: left; width: 100%; height: 32px; font-size: 13px; margin-bottom: 10px;', type='submit', name='commit', value='Add Rest')
+
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Delete Restaurant
+                            strong.class(caret='caret')
+                        .dropdown-menu(style='padding: 15px; padding-bottom: 10px;')
+                            form#formAddUser(action='/removerest', method='post', accept-charset='UTF-8')
+                                | Restaurant Name
+                                input#inputRestName(style='margin-bottom: 15px;', type='text', name='restname', size='30')
+                                input.btn.btn-primary(style='clear: left; width: 100%; height: 32px; font-size: 13px;', type='submit', name='commit', value='Delete Restaurant')
+
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Modify Restaurant
+                            strong.class(caret='caret')
+                        .dropdown-menu(style='padding: 15px; padding-bottom: 0px;')
+                            form#formAddUser(action='/updateuser', method='post', accept-charset='UTF-8')
+                                | Restaurant Name
+                                input#inputRestName(style='margin-bottom: 15px;', type='text', name='restname', size='30')
+                                | Phone Number
+                                input#inputRestNumber(style='margin-bottom: 15px;', type='text', name='restnumber', size='30')
+                                | Menu Item
+                                input#inputMenuItem(style='margin-bottom: 15px;', type='text', name='menuitem', size='30')
+                                input#userAdmin(style='float: left; margin-right: 10px;', type='checkbox', name='useradmin', value='1')
+                                label.string.optional(for='userAdmin')  Admin?
+                                input.btn.btn-primary(style='clear: left; width: 100%; height: 32px; font-size: 13px; margin-bottom: 10px;', type='submit', name='commit', value='Modify User')
+
+
+    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/greetingadmin') Coding House
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='/userlist') Account Management
+
+                li.dropdown.one
+                    a.dropdown-toggle.index.one(data-toggle='dropdown')
+                        | Assignments
+                        span.caret
+                    ul.dropdown-menu.index.one(role='menu')
+                        li
+                            a(href='/ph1sp1admin') Phase 1
+                        li
+                            a(href='/ph2sp1admin') Phase 2
+                li.dropdown.two
+                    a.dropdown-toggle.index.two(data-toggle='dropdown')
+                        | Restaurants
+                        span.caret
+                    ul.dropdown-menu.index.two(role='menu')
+                        li
+                            a(href='/neworder') New Order
+                        li
+                            a(href='/orderhistory') Order History
+                        li
+                            a(href='/newrestaurant') Add New Restaurant
+    script(type='text/javascript').
+        $(document).ready(function() {
+            $(".dropdown-toggle.index.one").mouseenter(function(){
+                $(".dropdown-menu.index.one").slideDown(600);
+            });
+
+            $("li.dropdown.one").mouseleave(function(){
+                $(".dropdown-menu.index.one").slideUp(600);
+            });
+            $(".dropdown-toggle.index.two").mouseenter(function(){
+                $(".dropdown-menu.index.two").slideDown(600);
+            });
+
+            $("li.dropdown.two").mouseleave(function(){
+                $(".dropdown-menu.index.two").slideUp(600);
+            });
+        });
+
+    .col-lg-2.col-med-2.col-sm-2
+    .panel.panel-default.col-lg-8.col-med-8.col-sm-8
+        .panel-heading
+            h3.panel-title Restaurants
+            .panel-body
+                .list-group.col-lg-10.col-med-10.col-sm-10
+                    ul
+                        each user, i in userlist
+                            li#userlist
+                                a(href="/userlist/#{user.username}")= user.username

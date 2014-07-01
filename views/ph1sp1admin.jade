@@ -1,0 +1,88 @@
+extends layoutadmin
+
+block content
+    .row
+        .col-md-2
+            .sidebar(style='border-right: 1px solid grey; padding-right: 0; border-bottom: 1px solid grey;')
+                ul.nav.nav-sidebar
+                    p.phases Phase I
+                        ul
+                            li.sprints
+                                a(href='/ph2sp1admin') Sprint 1
+
+
+        .col-md-8
+            h2 Sprint 1: Node.js Intro
+            ul
+                li
+                    form#formSubmitTask(name="addTask",method="post",action="/addTaskSave11")
+                        each task in tasks[0].tasklist
+                            li
+                                p= task.task
+                        input#inputTask(type="text", placeholder="Add Task", name="inputTask")
+                        button#btnSubmit(type="submit") Submit
+
+            h3 Assignments
+
+            .row
+                //.col-md-2
+                    //form#tableForm(action='getJson')
+                    //    select.selectpicker(data-style='btn-info', name='studentpicker')
+                    //        optgroup(label='Select Student')
+                    //            option(name='', value='0') Select Student
+                    //            option(name='Bill', value='1') Bill
+                    //            option(name='Jose', value='2') Jose
+                    //            option(name='Peter', value='3') Peter
+                    //            option(name='Sean', value='4') Sean
+                    //            option(name='Taylor', value='5') Taylor
+
+                .col-md-5
+                    ul
+                        input#checkAssign(type="checkbox", name="assignment")
+                        | *Introduction to HTML5 (instructor-led)
+                        br
+                        input#checkAssign(type="checkbox", name="assignment")
+                        | + overview of HTML5 technologies
+                        br
+                        input#checkAssign(type="checkbox", name="assignment")
+                        | Tasks: creating HTML5 Web pages with HTML5 technologies
+                        br
+                        input#checkAssign(type="checkbox", name="assignment")
+                        | + CSS3
+
+                .col-md-6
+                    table
+                        thead
+                            tr: th Grades
+                        tbody
+                            tr
+                                td
+                                    form#formAddGrade(name="addGrade",method="post",action="/addGrade")
+                                    input#inputGrade(type="number", placeholder="Bill", name="billsGrade", min="1",
+                                    max="100")
+                                    input#inputGrade(type="number", placeholder="Jose", name="josesGrade", min="1",
+                                    max="100")
+                                    input#inputGrade(type="number", placeholder="Peter", name="petersGrade", min="1",
+                                    max="100")
+                                    input#inputGrade(type="number", placeholder="Sean", name="seansGrade", min="1",
+                                    max="100")
+                                    input#inputGrade(type="number", placeholder="Taylor", name="taylosGrade", min="1",
+                                    max="100")
+                                    button#btnSubmit(type="submit") submit
+
+            //input#submitAssignment(type="file", placeholder=".zip", name="Assignment")
+            //button#btnSubmit(type="submit") submit
+
+            h3 Questions
+            ol
+                each question in questions[0].questionlist
+                    li
+                        p= question.question
+                    form#formSubmitAnswer(name="addAnswer",method="post",action="/addAnswerSave11")
+                        input#inputAnswer(type="text", placeholder="Enter text", name="inputAnswer")
+                        button#btnSubmit(type="submit") Submit Answer
+
+
+
+
+

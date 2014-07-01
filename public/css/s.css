@@ -1,0 +1,55 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding-bottom: 20px;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.col-md-2 {
+    margin-left: -50px;
+}
+
+p {
+    font-size: 18px;
+}
+
+#inputQuestion {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#submitAssignment {
+    margin-bottom: 10px;
+}
+
+#checkAssign {
+    margin: 5px;
+}
+
+#inputAnswer {
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.phases {
+    margin: 10px;
+}
+
+.sprints {
+    margin-bottom: 5px;
+}
+
+.col-md-2.indexphase {
+    width: 20%;
+}
+
+.index.phase {
+    width: 180px;
+    height: 150px;
+    padding: 0;
+    background-color: skyblue;
+    margin-top: 40px;
+}

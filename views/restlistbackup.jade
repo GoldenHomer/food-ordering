@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1.
+        Restaurant List
+    form#formSelectRest(name="selectrestaurant",method="post",action="/selectrestaurant")
+        each rest, i in restlist
+            if i == voted
+                input(type='radio', name='rest[name]', value='#{rest.restname}', checked=true)
+                | #{rest.restname}
+            if i != voted
+                input(type='radio', name='rest[name]', value='#{rest.restname}')
+                | #{rest.restname}
+            br
+
+        button(type='submit') submit
+
+    form#formWinningRest(name="winningrestaurant",method="get",action="/winningrestaurant")
+        button(type='submit', id='showresultsbtn') Show Results
+        input(type='text', id='winningrestaurant',name='winningrestaurant', value='#{voted} persons')

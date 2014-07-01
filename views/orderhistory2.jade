@@ -1,0 +1,94 @@
+extends layout
+
+block content
+
+    link(rel='stylesheet', href='css/p2.css')
+
+    body
+      .navbar.navbar-default.navbar-fixed-top(role='navigation')
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/greetingadmin') Coding House
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href='/userlist') Account Management
+
+                    li.dropdown.one
+                        a.dropdown-toggle.index.one(data-toggle='dropdown')
+                            | Assignments
+                            span.caret
+                        ul.dropdown-menu.index.one(role='menu')
+                            li
+                                a(href='/ph1sp1admin') Phase 1
+                            li
+                                a(href='/ph2sp1admin') Phase 2
+                    li.dropdown.two
+                        a.dropdown-toggle.index.two(data-toggle='dropdown')
+                            | Restaurants
+                            span.caret
+                        ul.dropdown-menu.index.two(role='menu')
+                            li
+                                a(href='/neworder') New Order
+                            li
+                                a(href='/orderhistory') Order History
+                            li
+                                a(href='/newrestaurant') Add New Restaurant
+        script(type='text/javascript').
+            $(document).ready(function() {
+                $(".dropdown-toggle.index.one").mouseenter(function(){
+                    $(".dropdown-menu.index.one").slideDown(600);
+                });
+
+                $("li.dropdown.one").mouseleave(function(){
+                    $(".dropdown-menu.index.one").slideUp(600);
+                });
+                $(".dropdown-toggle.index.two").mouseenter(function(){
+                    $(".dropdown-menu.index.two").slideDown(600);
+                });
+
+                $("li.dropdown.two").mouseleave(function(){
+                    $(".dropdown-menu.index.two").slideUp(600);
+                });
+            });
+
+    .container
+      .row.clearfix
+        .column.col-xs-1
+        #listbox.column.col-xs-9
+            table.table
+                thead#orderhistorylist
+                    tr#title
+                        th Date
+                        //- th Time
+                        th Restaurant
+                        th Price
+                        th Receipt
+                tbody
+                    if(orderHistory != "")
+                        each oneOrder, i in orderHistory
+                            tr
+                                td= oneOrder.order.date
+                                //- td= oneOrder.order.ordertime
+                                td= oneOrder.order.restname
+                                td= oneOrder.order.price
+
+              .messagepop.pop
+                form#new_message(method='post', action='/messages')
+                  p
+                    label(for='total') Total Price
+                      input#total(type='text', size='10', name='total')
+                  p
+                    input#receipt(type='file', value='Upload Receipt : ', name='receipt')
+                  p
+                    input#submit_receipt(type='submit', value='Submit Receipt', name='submitreceipt')
+                    | or
+                    a.close(href='/') Cancel
+
+    script(src='js/vendor/jquery-1.11.0.min.js')
+    script(src='js/vendor/bootstrap.min.js')
+    script(src='js/p.js')

@@ -1,0 +1,52 @@
+extends layoutuser
+
+block content
+    .row
+        .col-md-2
+            .sidebar(style='border-right: 1px solid grey; padding-right: 0; border-bottom: 1px solid grey;')
+                ul.nav.nav-sidebar
+                    p.phases Phase I
+                        ul
+                            li.sprints
+                                a(href='/ph1sp1') Sprint 1
+                            li.sprints
+                                a(href='/ph1sp2') Sprint 2
+
+
+        .col-md-8
+            h2 Sprint 2: HTML5 (CSS3/Bootstrap/mobile)
+            p(style='white-space:pre;')
+                |+ HTML fundamentals (2h:13min):
+                |+ HTML fundamentals:
+                |  http://pluralsight.com/training/Courses/TableOfContents/html-fundamentals
+                |+ HTML5 fundamentals:
+                |  http://pluralsight.com/training/Courses/TableOfContents/html5-fundamentals-2e
+                |+ HTML form fundamentals:
+                |  http://pluralsight.com/training/courses/TableOfContents?courseName=html-forms&highlight=matt
+                |  -milner_html-forms-m1-fundamentals!matt-milner_html-forms-m3-organizing!matt-milner_html-forms-m4
+                |  -scenarios*1,2!matt-milner_html-forms-m5-server*2,3#html-forms-m1-fundamentals
+                |* HTML5 mark-up and forms
+                |+ http://desireapps.com/html5_form.php
+                |+ introduction to Bootstrap
+                |+ http://pluralsight.com/training/courses/TableOfContents?courseName=bootstrap-3&highlight=shawn
+                |  -wildermuth_bootstrap-3-m6*2!shawn-wildermuth_bootstrap-3-m3!shawn-wildermuth_bootstrap-3-m1*2,
+                |  3!shawn-wildermuth_bootstrap-3-m5!shawn-wildermuth_bootstrap-3-m4!shawn-wildermuth_bootstrap-3-m2*1,
+                |  9#bootstrap-3-m6
+
+            h3 Assignments
+            p(style='white-space:pre;')
+                |* Introduction to HTML5 (instructor-led)
+                |Tasks: creating HTML5 Web pages with HTML5 technologies
+                |+ overview of HTML5 technologies
+                |+ CSS3
+            input#inputQuestion(type="file", placeholder=".zip", name="Assignment")
+            button#btnSubmit(type="submit") submit
+
+            h3 Questions
+            form#formNewQuestion(name="addQuestion",method="post",action="/addQuestion")
+            input#inputQuestion(type="text", placeholder="Question", name="Question")
+            button#btnSubmit(type="submit") submit
+
+
+
+

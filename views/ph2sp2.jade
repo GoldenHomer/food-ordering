@@ -1,0 +1,46 @@
+extends layoutuser
+
+block content
+
+    .row
+        .col-md-2
+            .sidebar(style='border-right: 1px solid grey; padding-right: 0; border-bottom: 1px solid grey;')
+                ul.nav.nav-sidebar
+                    p.phases Phase II
+                        ul
+                            li.sprints
+                                a(href='/ph2sp1') Sprint 1
+                            li.sprints
+                                a(href='/ph2sp2') Sprint 2
+
+
+        .col-md-8
+            h2 Sprint 2: NodeJS Samples
+            p(style='white-space:pre;')
+                | +Use npm to install node modules
+                | +some modules are part of 'core' NodeJS:
+                | -net/etc
+                |    +A code sample using the built-in net module
+                | +var net = require('net');
+                | +var server = net.createServer();
+                | +server.on('connection', function() {
+                | +console.log('got new connection');
+                |  });
+                | +server.listen(4000);
+
+            h3 Assignments
+            p(style='white-space:pre;')
+                |* Introduction to HTML5 (instructor-led)
+                |Tasks: creating HTML5 Web pages with HTML5 technologies
+                |+ overview of HTML5 technologies
+                |+ CSS3
+            input#inputQuestion(type="file", placeholder=".zip", name="Assignment")
+            button#btnSubmit(type="submit") submit
+
+            h3 Questions
+            form#formNewQuestion(name="addQuestion",method="post",action="/addQuestion")
+            input#inputQuestion(type="text", placeholder="Question", name="Question")
+            button#btnSubmit(type="submit") submit
+
+
+

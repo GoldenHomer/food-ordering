@@ -1,0 +1,80 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#listbox {
+  border: 0.2em solid #C0c0c0;
+  border-radius: 25px;
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+
+.line-separator {
+  height: 1px;
+  background: #C0C0C0;
+  margin: 8px;
+}
+
+/* Start button */
+
+a.selected {
+  background-color:#1F75CC;
+  color:white;
+  z-index:100;
+}
+
+.messagepop {
+  background-color:#FFFFFF;
+  border:0.2em solid #C0C0C0;
+  cursor:default;
+  display:none;
+  position:absolute;
+  text-align:left;
+  width:394px;
+  padding: 25px 25px 20px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.messagepop p, .messagepop.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}
+
+/* End button */
+
+#header {
+    background-color: #FF5300;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+    color: #fff;
+    font-size: 28px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+#data {
+    background-color: #fff;
+    -webkit-border-radius: 0 0 20px 20px;
+    -moz-border-radius: 0 0 20px 20px;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 26px;
+}

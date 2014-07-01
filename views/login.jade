@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+    link(rel='stylesheet', href='css/t.css')
+
+    body(style='margin: 5px;')
+
+
+        #login
+            h2
+                span.fontawesome-lock
+                | Sign In
+            form(action='/', method='POST')
+                fieldset
+                    p
+                        label(for='username') Username
+                    p
+                        input#username(type='text', value='', name='username', autofocus)
+                    p
+                        label(for='password') Password
+                    p
+                        input#password(type='password', value='', name='password')
+                    p
+                        input(type='submit', value='Sign In')

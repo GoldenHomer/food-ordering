@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1= title
+    form#formDeleteUser(name="deleteuser",method="post",action="/removeuser")
+        input#inputUserName(type="text", placeholder="username", name="username")
+        button#btnSubmit(type="submit") submit

@@ -1,0 +1,47 @@
+extends layoutuser
+
+block content
+    .row
+        .col-md-2
+            .sidebar(style='border-right: 1px solid grey; padding-right: 0; border-bottom: 1px solid grey;')
+                ul.nav.nav-sidebar
+                    p.phases Phase II
+                        ul
+                            li.sprints
+                                a(href='/ph2sp1') Sprint 1
+                            li.sprints
+                                a(href='/ph2sp2') Sprint 2
+
+
+        .col-md-8
+            h2 Sprint 1: Node.js Intro
+            p(style='white-space:pre;')
+                |* Introduction to HTML5 (instructor-led)
+                |Tasks: creating HTML5 Web pages with HTML5 technologies
+                |+ overview of HTML5 technologies
+                |+ CSS3
+                |+ HTML5 Canvas
+                |+ SVG
+                |+ download/install Eclipse
+                |+ install Android
+                |+ create a default Android application
+                |+ deploy the application to a mobile device
+                |+ quick overview of D3
+                |+ create a bar chart using D3
+
+            h3 Assignments
+            p(style='white-space:pre;')
+                |* Introduction to HTML5 (instructor-led)
+                |Tasks: creating HTML5 Web pages with HTML5 technologies
+                |+ overview of HTML5 technologies
+                |+ CSS3
+            input#inputQuestion(type="file", placeholder=".zip", name="Assignment")
+            button#btnSubmit(type="submit") submit
+
+            h3 Questions
+            form#formNewQuestion(name="addQuestion",method="post",action="/addQuestion")
+            input#inputQuestion(type="text", placeholder="Question", name="Question")
+            button#btnSubmit(type="submit") submit
+
+
+

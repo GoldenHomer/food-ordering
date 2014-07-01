@@ -1,0 +1,220 @@
+
+
+/* NAV BAR */
+.navbar {
+    border-top: 3px solid #FF5300;
+}
+
+/* BODY */
+body {
+    background-color: #ECF0F1;
+    background: url('../images/pattern.png') fixed;
+}
+
+/* CONTAINER 1 */
+.containerOne h2 {
+    background-color: #FF5300;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+    color: #fff;
+    font-size: 28px;
+    padding: 20px 26px;
+    margin-bottom: 0;
+}
+
+.containerOneData {
+    background-color: #fff;
+    -webkit-border-radius: 0 0 20px 20px;
+    -moz-border-radius: 0 0 20px 20px;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 26px;
+}
+
+#formSelectRest #submitVote {
+    background-color: #33cc77;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 0;
+}
+
+#formSelectRest #voteSubmitted {
+    background-color: dimgray;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#formSelectRest #submitVote:hover {
+    background-color: #28ad63;
+}
+
+/*.voteRestaurantRadioButton {*/
+    /*visibility: hidden*/
+/*}*/
+
+/*.voteRestaurantRadioButtonLabel:hover {*/
+    /*color: blue;*/
+/*}*/
+
+/*.voteRestaurantRadioButtonLabel:active, .voteRestaurantRadioButtonLabel:focus {*/
+    /*color: purple;*/
+/*}*/
+
+.refreshResults {
+    background-color: #33cc77;
+    color: #fff;
+    display: inline-block;
+    padding: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 0 10px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.refreshResults:hover {
+    text-decoration: none;
+    background-color: #28ad63;
+    color: #fff;
+}
+
+/* CONTAINER 2 */
+.containerTwo h2 {
+    background-color: #FF5300;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+    color: #fff;
+    font-size: 28px;
+    padding: 20px 26px;
+    margin-bottom: 0;
+}
+
+.containerTwoData {
+    background-color: #fff;
+    -webkit-border-radius: 0 0 20px 20px;
+    -moz-border-radius: 0 0 20px 20px;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 26px;
+}
+
+#restaurantName {
+    margin: 0;
+}
+/* CONTAINER THREE */
+.containerThree h2 {
+    background-color: #FF5300;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+    color: #fff;
+    font-size: 28px;
+    padding: 20px 26px;
+    margin-bottom: 0;
+}
+
+.containerThreeData {
+    background-color: #fff;
+    -webkit-border-radius: 0 0 20px 20px;
+    -moz-border-radius: 0 0 20px 20px;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 26px;
+}
+
+#submitOrder {
+    background-color: #33cc77;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 0;
+    height: 34px;
+
+}
+
+#orderSubmitted {
+    background-color: dimgray;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#submitOrder:hover, #voteSubmitted {
+    background-color: #28ad63;
+}
+
+.selecteditem {
+    background-color: lightpink;
+    color: black;
+}
+
+/* MISC */
+label {
+    font-weight: normal;
+}
+
+form.formOS {
+	display: table;
+	margin: 0 auto;
+}
+
+p.menuList-1 {
+	display: table;
+	width: 600px;
+	margin-bottom: 50px;
+
+}
+
+form p label {
+	margin: 0 auto;
+	width: 150px;
+	height: 20px;
+}
+
+form p label input {
+	margin: 5;
+}
+
+.commentOrder {
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 100%;
+	display: inline-block;
+    border-radius: 4px;
+
+}
+
+.comSec1 {
+	width:200px;
+	display: inline-block;
+	float: left;
+}
+
+.submitSec1 {
+	display: table;
+	margin: 0 auto;
+}
+
+.submitBtn {
+	display: inline-block;
+	float: left;
+}

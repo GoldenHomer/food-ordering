@@ -1,0 +1,1 @@
+db.orderhistorycollection.remove({});

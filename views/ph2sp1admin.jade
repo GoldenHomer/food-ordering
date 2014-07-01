@@ -1,0 +1,70 @@
+extends layoutadmin
+
+block content
+    .row
+        .col-md-2
+            .sidebar(style='border-right: 1px solid grey; padding-right: 0; border-bottom: 1px solid grey;')
+                ul.nav.nav-sidebar
+                    p.phases Phase II
+                        ul
+                            li.sprints
+                                a(href='/ph2sp1admin') Sprint 1
+
+
+        .col-md-8
+            h2 Sprint 1: Node.js Intro
+            p(style='white-space:pre;')
+                |* Introduction to HTML5 (instructor-led)
+                |Tasks: creating HTML5 Web pages with HTML5 technologies
+                |+ overview of HTML5 technologies
+                |+ CSS3
+                |+ HTML5 Canvas
+                |+ SVG
+                |+ download/install Eclipse
+                |+ install Android
+                |+ create a default Android application
+                |+ deploy the application to a mobile device
+                |+ quick overview of D3
+                |+ create a bar chart using D3
+
+            h3 Assignments
+            input#checkAssign(type="checkbox", name="assignment")
+            | *Introduction to HTML5 (instructor-led)
+            br
+            input#checkAssign(type="checkbox", name="assignment")
+            | + overview of HTML5 technologies
+            br
+            input#checkAssign(type="checkbox", name="assignment")
+            | Tasks: creating HTML5 Web pages with HTML5 technologies
+            br
+            input#checkAssign(type="checkbox", name="assignment")
+            | + CSS3
+
+            h4 Grade
+            form#formAddGrade(name="addGrade",method="post",action="/addGrade")
+            input#inputGrade(type="number", placeholder="Score", name="Grade", min="1", max="100")
+            button#btnSubmit(type="submit") submit
+
+            //input#submitAssignment(type="file", placeholder=".zip", name="Assignment")
+            //button#btnSubmit(type="submit") submit
+
+            h3 Questions
+            p Question 1
+            form#formNewAnswer(name="addAnswer",method="post",action="/addAnswer")
+            input#inputAnswer(type="text", placeholder="Submit Answer", name="Answer")
+            button#btnSubmit(type="submit") submit
+
+            p Question 2
+            form#formNewAnswer(name="addAnswer",method="post",action="/addAnswer")
+            input#inputAnswer(type="text", placeholder="Submit Answer", name="Answer")
+            button#btnSubmit(type="submit") submit
+
+            p Question 3
+            form#formNewAnswer(name="addAnswer",method="post",action="/addAnswer")
+            input#inputAnswer(type="text", placeholder="Submit Answer", name="Answer")
+            button#btnSubmit(type="submit") submit
+
+
+
+
+

@@ -1,0 +1,52 @@
+extends layoutuser
+
+block content
+    .row
+        .col-md-2
+            .sidebar(style='border-right: 1px solid grey; padding-right: 0; border-bottom: 1px solid grey;')
+                ul.nav.nav-sidebar
+                    p.phases Phase I
+                        ul
+                            li.sprints
+                                a(href='/ph1sp1') Sprint 1
+                            li.sprints
+                                a(href='/ph1sp2') Sprint 2
+
+        .col-md-8
+            h2 Sprint 1: HTML5 (Canvas/CSS3/D3/SVG)
+            ul
+                li
+                    form#formSubmitTask(name="addTask",method="post",action="/addTaskSave11")
+                        each task in tasks[0].tasklist
+                            li
+                                p= task.task
+                        //input#inputTask(type="text", placeholder="Submit Task", name="inputTask")
+                        //button#btnSubmit(type="submit") Submit Task
+
+            h3 Assignments
+            ul
+                li Introduction to HTML5 (instructor-led)
+                li Tasks: creating HTML5 Web pages with HTML5 technologies
+                li Overview of HTML5 technologies
+                li CSS3
+                form#formsubmitAssignment(name="addAssignment",method="get",action="/addAssignmentSave")
+                    //input#inputQuestion(type="file", placeholder=".zip", name="Assignment")
+                    //button#btnSubmit(type="submit") Submit Assignment
+
+            h3 Questions
+            ol
+                each question in questions[0].questionlist
+                    li
+                        p= question.question
+
+                form#formSubmitQuestion(name="addQuestion",method="post",action="/addQuestionSave11")
+                    input#inputQuestion(type="text", placeholder="Question", name="inputQuestion")
+                    button#btnSubmit(type="submit") Submit Question
+
+            h3 Answers
+            ol
+                each answer in answers[0].answerlist
+                    li
+                        p= answer.answer
+
+

@@ -1,0 +1,74 @@
+HEAD
+extends layout
+
+block content
+
+    link(rel='stylesheet', href='css/p1.css')
+
+    body
+        .navbar.navbar-default.navbar-fixed-top(role='navigation')
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/greetingadmin') Let's Eat!
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href='/userlist') Account Management
+                    li
+                        a(href='/neworder') New Order
+                    li
+                        a(href='/orderhistory') Order History
+                    li
+                        a(href='/') Log out
+
+        .container
+            .row.clearfix
+                .column.col-md-4.col-sm-3
+                .column.col-md-4.col-sm-6
+                        h2 Order List
+                        form#listbox(method="post", action="/orderform")
+                            if(newOrder != "")
+                                - var item = newOrder[0]
+                                    input(name='restaurantName', readonly, value='#{item.restname}', style="display:none;")
+                                    h4= item.restname
+                                    h5= item.phonenumber
+                            else
+                                h4#votingInProgress Voting still in progress
+                            a#addMenuItem(href='/addmenuitemadmin/0') Add Menu Item
+                            if(newOrder != "")
+                                ol
+                                    - each item, i in newOrder
+                                        .line-separator
+                                        //- label
+                                        //- input#checkbox(type='checkbox' name='orderlist')
+                                        //- #menulist
+                                        //- span Name: #{item.username}
+                                        li Menu item: #{item.menuitem}
+                                        if(item.specialreq != "")
+                                            span Special Req: #{item.specialreq}
+                                        else
+                                            span Special Req: None
+                                //- button#remove.btn.btn-primary(type='button', action='/removeorders') Remove Selected Orders
+                                //- button.btn.btn-primary(type='button') Clear Votes
+                            .row.clearfix
+                                .column.col-md-12
+                                    label(for='price', class='price') Price of order: &nbsp;
+                                    input(type="text", class="form-control price", name='restaurantPrice', id="price", placeholder="$100.00")
+                                .column.col-md-12
+                                    input#archiveOrder(type='submit', name='', value='Archive Order')
+
+
+
+
+            //- .row.clearfix
+            //-     .column.col-xs-8
+            //-         - each rest, i in restlist
+            //-             li= rest
+
+            //-     form#formmenuItemSubmit(name="submitteditem",method="post",action="/NewItemForCurrentOrderAdmin")
+            //-         input(type='text', class='selecteditem commentOrder', name='selecteditem', value='')
+            //-         input(type="text", class="form-control commentOrder", name='specialRequest', id="userComments" ,placeholder="Special Request")
