@@ -1,7 +1,9 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
-2 info using npm@1.4.6
-3 info using node@v0.10.26
+1 verbose cli [ '/Users/josecontreras/.nvm/v0.10.28/bin/node',
+1 verbose cli   '/Users/josecontreras/.nvm/v0.10.28/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info prestart application-name@0.0.1
 6 info start application-name@0.0.1
@@ -18,9 +20,9 @@
 10 error     npm owner ls application-name
 10 error There is likely additional logging output above.
 11 error System Darwin 13.2.0
-12 error command "node" "/usr/local/bin/npm" "start"
-13 error cwd /Users/peterkim/Desktop/CHP-master
-14 error node -v v0.10.26
-15 error npm -v 1.4.6
+12 error command "/Users/josecontreras/.nvm/v0.10.28/bin/node" "/Users/josecontreras/.nvm/v0.10.28/bin/npm" "start"
+13 error cwd /Users/josecontreras/GitHub/food-ordering
+14 error node -v v0.10.28
+15 error npm -v 1.4.9
 16 error code ELIFECYCLE
 17 verbose exit [ 1, true ]

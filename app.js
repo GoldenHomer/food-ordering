@@ -35,20 +35,6 @@ app.use(clientSessions({
   activeDuration: 1000 * 60 * 5
 }));
 
-
-// //client-session START
-// app.use(function(req, res, next) {
-//   if (req.mySession.seenyou) {
-//     res.setHeader('X-Seen-You', 'true');
-//   } else {
-//     // setting a property will automatically cause a Set-Cookie response
-//     // to be sent
-//     req.mySession.seenyou = true;
-//     res.setHeader('X-Seen-You', 'false');
-//   }
-// });
-// //client-session END
-
 // Make our db accessible to our router
 app.use(function(req,res,next){
     req.db = db;
