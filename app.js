@@ -15,7 +15,6 @@ var users = require('./routes/users');
 
 var app = express();
 
-const
 clientSessions = require("client-sessions");
 
 // view engine setup
