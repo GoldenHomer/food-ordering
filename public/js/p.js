@@ -29,17 +29,3 @@ $.fn.slideFadeToggle = function(easing, callback) {
 };
 
 // End of button
-
-// $(document).ready(function(){
-//     console.log("hello");
-//     console.log(orderHistory);
-//     if(orderHistory != "")
-//         for each (orderHistory) {
-//             if(item.price != ""){
-//         console.log(item.price);
-//         $('th').html("a(href='#') Receipt")
-//     } else {
-//         $('th').html("a(href='#') Upload Receipt")
-//     }
-// }
-// });
