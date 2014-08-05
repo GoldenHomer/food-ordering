@@ -1,4 +1,6 @@
 food-ordering
 =============
 
-Internal team project done at Coding House. Allows users to vote on an array of restaurants and then select from the winning restaurant's menu. The original application is deployed at http://tranquil-plains-1058.herokuapp.com. However, the files here have a better CSS styling. I'm trying to get the newer version deployed on Heroku so you may see the functionality.
+Internal team project done at Coding House. Allows users to vote on an array of restaurants and then select from the winning restaurant's menu. The original application is deployed at http://tranquil-plains-1058.herokuapp.com. 
+
+Here's the recent version: http://evening-inlet-7077.herokuapp.com/
