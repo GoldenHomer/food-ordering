@@ -8,4 +8,11 @@ http://lets-eat.herokuapp.com/
 username: guest
 password: guest
 
+To see order submitted, log in as administrator:
+
+username: admin
+password: admin
+
+Navigate to the New Order tab and if you submitted something, you should see your order there.
+
 Try it out yourself.
